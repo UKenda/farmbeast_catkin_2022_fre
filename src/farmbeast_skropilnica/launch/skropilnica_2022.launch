@@ -1,0 +1,4 @@
+<launch>  
+    <node pkg="rosserial_python" type="serial_node.py" name="serial_node"/>
+    <node pkg="farmbeast_skropilnica" type="simple.py" name="skorpilnica_node"/>
+</launch>

@@ -1,0 +1,20 @@
+<launch>
+
+    <!-- rowmaster -->
+	<!-- <node name="navigation_task1" pkg="farmbeast_navigation" type="navigation_rowmaster" 		output="screen" > 
+	<param name="obrni" value="-1" />
+	</node> -->
+
+
+	<node name="navigation_task1" pkg="farmbeast_navigation" type="navigation_rowmaster" 		output="screen" > 
+
+	<node name="navigation_task1" pkg="farmbeast_navigation" type="navigation_rowmaster" 		output="screen" > 
+	<param name="obrni" value="-1" />
+
+   <!-- ovinek iz ene vrste v drugo -->
+	<node name="navigation_task1" pkg="farmbeast_navigation" type="navigation_orientacija.cpp" 		output="screen" >
+
+	</node>
+
+
+</launch>

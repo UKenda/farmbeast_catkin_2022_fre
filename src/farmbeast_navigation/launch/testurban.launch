@@ -1,0 +1,77 @@
+<launch>
+
+
+
+  <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch"/>
+    <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="pointcloud_to_laserscan">
+      <remap from="cloud_in" to="/velodyne_points"/>
+      <remap from="scan" to="/camera/scan" />
+      <rosparam>
+
+        transform_tolerance: 0.01
+        min_height: 0.0
+        max_height: 1.0
+        
+        angle_min: -1.2
+        angle_max: 1.2
+        range_min: 0.1
+        range_max: 0.85
+        use_inf: true
+        
+        #concurrency_level affects number of pc queued for processing and the number of threadsused
+        # 0: Detect number of cores
+        # 1: Single threaded
+        # 2: inf : Parallelism level
+        concurrency_level: 1
+      </rosparam>
+    </node>
+
+        <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="pointcloud_to_laserscan_levo">
+      <remap from="cloud_in" to="/velodyne_points"/>
+      <remap from="scan" to="/camera/scan_levo" />
+      <rosparam>
+
+        transform_tolerance: 0.01
+        min_height: 0.0
+        max_height: 1.0
+        
+        angle_min: 1.42
+        angle_max: 1.72
+        range_min: 0.1
+        range_max: 1.2
+        use_inf: true
+        
+        #concurrency_level affects number of pc queued for processing and the number of threadsused
+        # 0: Detect number of cores
+        # 1: Single threaded
+        # 2: inf : Parallelism level
+        concurrency_level: 1
+      </rosparam>
+    </node>
+
+    <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="pointcloud_to_laserscan_desno">
+      <remap from="cloud_in" to="/velodyne_points"/>
+      <remap from="scan" to="/camera/scan_desno" />
+      <rosparam>
+
+        transform_tolerance: 0.01
+        min_height: 0.0
+        max_height: 1.0
+        
+        angle_min: -1.72
+        angle_max: -1.42
+        range_min: 0.1
+        range_max: 1.2
+        use_inf: true
+        
+        #concurrency_level affects number of pc queued for processing and the number of threadsused
+        # 0: Detect number of cores
+        # 1: Single threaded
+        # 2: inf : Parallelism level
+        concurrency_level: 1
+      </rosparam>
+    </node>
+    <node pkg="farmbeast_navigation" type="navigation_2022" name="farmbeast_navigation" output="screen"/>
+    <node pkg="farmbeast_navigation" type="counting_rows" name="farmbeast_rows_counting" output="screen" />
+
+</launch>

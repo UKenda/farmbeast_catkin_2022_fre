@@ -1,0 +1,20 @@
+<launch>
+
+
+        <param name="farmbeast/wheel/calibration/all" type="bool" value="false" />
+        <param name="farmbeast/wheel/calibration/the_one" type="bool" value="false" />
+        <param name="farmbeast/drive_mode" type="int" value="1" /><!-- 0 = calibration_mode 1 = joy_mode | 2 = navigation_mode -->
+        <param name="farmbeast/wheel/speed" type="double" value="0.5" />
+        <param name="farmbeast/obracanje" type="int" value="0" /><!--0 ni obracanja || 1 levo || 2 desno -->
+        <param name="farmbeast/izvajanje" type="int" value="0" />
+        <node pkg="joy" name="joy_node" type="joy_node" />
+        <node pkg="farmbeast_teleop_twist" name="farmbeast_teleop_twist_node" type="farmbeast_teleop_twist_node" />
+
+        <!--<include file="$(find phidgets_spatial)/launch/spatial.launch" />
+        <node pkg="farmbeast_navigation" name="imu_node" type="imu_node" output="screen"/>-->
+
+
+        <node pkg="farmbeast_odrive" name="odrive_node" type="odrive_node.py" output="screen" />
+        <include file="$(find farmbeast_skropilnica)/launch/skropilnica_2022.launch"/>
+
+</launch>

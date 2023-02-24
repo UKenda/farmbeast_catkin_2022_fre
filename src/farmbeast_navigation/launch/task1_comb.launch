@@ -1,0 +1,21 @@
+<launch>
+
+    <!-- rowmaster_combined -->
+	<node name="navigation_task1" pkg="farmbeast_navigation" type="farmbeast_povpr_rm" output="screen"> 
+	<param name="obrni" value="-1" />
+	<param name="min_val" value="0.02" />
+	<param name="max_val" value="0.5" />
+	<param name="max_obr" value="1" />
+	<param name="xSmer" value="0.2" />
+	<param name="st_mer" value="20"/>
+	<param name="hitrost" value="0.2"/>
+	<param name="koef" value="2.5"/>
+	<param name="ack_nac" value="1"/>
+	<param name="kot_cal" value="0"/>
+	</node>
+
+   <!-- ovinek iz ene vrste v drugo -->
+	
+
+
+</launch>

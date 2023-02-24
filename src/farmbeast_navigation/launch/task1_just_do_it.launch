@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!--JUST. DO. IT. -->
+<launch>
+
+  	<!-- voznja skozi vrsto -->
+  	<!--<include file="$(find farmbeast_navigation)/launch/task1_comb.launch"/>-->
+
+  	<!-- obracanje-->
+  	<include file="$(find farmbeast_navigation)/launch/task1_obracanje.launch"/>
+
+</launch>

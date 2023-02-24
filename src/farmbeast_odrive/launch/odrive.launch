@@ -1,0 +1,3 @@
+<launch>  
+    <node pkg="farmbeast_odrive" type="odrive_node.py" name="odrive_node">
+</launch>

@@ -1,0 +1,16 @@
+<launch>
+
+    <!-- rowmaster_ackermann -->
+	<node name="navigation_task1" pkg="farmbeast_navigation" type="navigation_rm_ackermann" 		output="screen" > 
+	<param name="obrni" value="-1" />
+	<param name="min_val" value="0.05" />
+	<param name="max_val" value="0.60" />
+	<param name="max_obr" value="1" />
+	<param name="xSmer" value="0.2" />
+	</node>
+
+   <!-- ovinek iz ene vrste v drugo -->
+	
+
+
+</launch>

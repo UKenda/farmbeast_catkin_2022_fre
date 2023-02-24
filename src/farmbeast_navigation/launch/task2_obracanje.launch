@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+
+    <!-- rowmaster_combined -->
+	<node name="navigation_task2_obracanje" pkg="farmbeast_navigation" type="navigation_obracanje_task2_2019" output="screen"> 
+		
+	</node>
+
+   <!-- ovinek iz ene vrste v drugo -->
+	
+
+
+</launch>
